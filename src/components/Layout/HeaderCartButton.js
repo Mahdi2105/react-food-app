@@ -1,11 +1,11 @@
 import React from "react";
 import CartIcon from "../Cart/CartIcon";
 
-import classes from "./HeaderCardButton.module.css";
+import classes from "./HeaderCartButton.module.css";
 
-const HeaderCardButton = (props) => {
+const HeaderCartButton = (props) => {
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
@@ -15,4 +15,4 @@ const HeaderCardButton = (props) => {
   );
 };
 
-export default HeaderCardButton;
+export default HeaderCartButton;
