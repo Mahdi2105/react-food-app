@@ -25,6 +25,7 @@ const HeaderCartButton = (props) => {
       setBtnHighlighted(false);
     }, 300);
 
+    // return functions on useEffect it will be a clear up function
     // return () => {
     //   clearTimeout(timer);
     // };
