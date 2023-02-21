@@ -28,7 +28,7 @@ const CartReducer = (state, action) => {
         amount: existingItemInCart.amount + action.item.amount,
       };
       updatedItems = [...state.items];
-      // Gets the index and over writes it with the new infp
+      // Gets the index and over writes it with the new info
       updatedItems[existingItemInCartIndex] = updatedItem;
     } else {
       updatedItems = state.items.concat(action.item);
@@ -50,7 +50,7 @@ const CartReducer = (state, action) => {
     let updatedItems;
 
     if (existingItemInCart.amount === 1) {
-      updatedItems = state.items.filter((item) => !item.id === action.id);
+      updatedItems = state.items.filter((item) => item.id !== action.id);
     } else {
       const updatedItem = {
         ...existingItemInCart,
